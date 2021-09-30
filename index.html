@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css\estilos.css">
+
+         <!--bootstrap-->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </head>
+    <h1>FORMULARIO</h1>
+    <body>
+        <div id="mensaje"></div>
+        <form role="form" id="formulario" class="row g-3 needs-validation" data-toggle="validator">
+            <ul>
+                <li>
+                    <label for="nombrecompleto" class="form-label">Nombre completo</label>
+                    <input type="text" id="nombrecompleto"  required>
+                </li>
+                <li>
+                    <label for="rut" class="form-label">RUT</label>
+                    <input type="text" id="rut" required maxlength="8" placeholder="sin puntos" size="11px" >
+                    <label for="guion" > - </label>
+                    <input type="text" id="digitoverificador" required maxlength="1" size="2px" placeholder="digito">
+                </li>
+                <li id="correo">
+                    <label for="correo" >Correo</label>
+                    <input type="email" id="correo1" placeholder=" name@example.com" required>
+                </li>
+                <li id="telefono">
+                    <label for="telefono">Telefono Movil</label>
+                    <input type="number" id="telefono1" placeholder=" Ingrese 9 digitos" minlength="9" maxlength="9" max="999999999" required>
+                </li>
+                <br>
+                <li>
+                    <label  class="form-check-label"for="lenguajes" >Selecciona uno o mas lenguajes de programacion de su interes</label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" >Python <br>
+                    <input class="form-check-input" type="checkbox" >Typescript <br>
+                    <input class="form-check-input" type="checkbox" >C++ <br>
+                    <input class="form-check-input" type="checkbox" >C# <br>
+                    <input class="form-check-input" type="checkbox" >PHP<br>
+                    <input class="form-check-input" type="checkbox" >Ruby on Rails <br>
+                    <input class="form-check-input" type="checkbox" >Java <br>
+                    <input class="form-check-input" type="checkbox" >R <br>
+                    <input class="form-check-input" type="checkbox" >Groovy <br>
+                    <input class="form-check-input" type="checkbox" >Go <br>
+                    <input class="form-check-input" type="checkbox" >Swift <br>
+                    <input class="form-check-input" type="checkbox" >Kotlin <br>
+                </li>
+                <br>
+                <li>
+                    <label class="form-check-label" for="nivelexperiencia">Cual es su nivel de experiencia en programacion</label><br>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>Alto
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>Medio 
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>Bajo
+
+
+                </li>
+                <li>
+                    <label for="nivel">Nivel de conocimiento sobre los siguientes lenguajes de programación</label><br>
+                    <br>
+                    <li> Python
+                        <input type="range" min="0" max="5" required>
+                    </li>
+                    <li> Java
+                        <input type="range" min="0" max="5" required>
+                    </li>
+                    <li>C++
+                        <input type="range" min="0" max="5" required>
+                    </li>
+                </li>
+                <li>
+                    <label class="form-check-label" for="dificultad">Seleccione cual de los siguientes cursos les ha tomado mayor dificultad</label><br>
+                    <input class="form-check-input" type="checkbox" >Estructura de datos <br>
+                    <input class="form-check-input" type="checkbox" >Inteligencia Artificial <br>
+                    <input class="form-check-input" type="checkbox" >Interacción Humano-Computado <br>
+                    <input class="form-check-input" type="checkbox" >Sistemas Operativos <br>
+                    <div class="input-group input-group-sm mb-3" id="otro">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Otro:</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+
+                </li>
+                <li>
+                    <label for="description" class="form-label">Queremos conocer su opinión acerca de la escuela:</label><br>
+                    <textarea class="form-control" id="opinion"  rows="3" maxlength="500" required></textarea><br>
+                </li>
+                
+                <li>
+                    <button class="btn btn-primary" type="submit" id="enviar"> Enviar Informacion</button>
+                    <button class="btn btn-primary" type="reset" id="borrar">Borrar formulario</button>
+                </li>
+              
+            </ul>
+        </form>
+
+        <script src="js/inicio.js" async defer></script>
+    </body>
+</html>
